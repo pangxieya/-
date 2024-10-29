@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生日祝福</title>
+    <title>Birthday Wishes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>生日快乐！🎉</h1>
-        <p class="greeting">亲爱的朋友，祝你在新的一岁里，快乐每一天，梦想成真！</p>
-        <p class="wish">愿你的生活如这蛋糕般甜蜜！</p>
-        <img src="birthday-cake.png" alt="生日蛋糕" class="cake-image">
-        <button onclick="showMessage()">发送祝福</button>
+        <h1>Happy Birthday! 🎉</h1>
+        <p class="greeting">Dear friend, wishing you happiness every day in the coming year and may all your dreams come true!</p>
+        <p class="wish">May your life be as sweet as this cake!</p>
+        <img src="birthday-cake.png" alt="Birthday Cake" class="cake-image">
+        <button onclick="showMessage()">Send Wishes</button>
         <p id="message" class="hidden"></p>
     </div>
 
     <script>
         function showMessage() {
-            document.getElementById('message').innerText = "祝你生日快乐，愿你每一天都充满欢笑！";
+            document.getElementById('message').innerText = "Happy birthday to you! May every day be filled with laughter!";
             document.getElementById('message').classList.remove('hidden');
         }
     </script>
