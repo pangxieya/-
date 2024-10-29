@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('background1.jpg'); /* 替换为你的背景图片路径 */
+    background-image: url('background.jpg'); /* 替换为你的背景图片路径 */
     background-size: cover; /* 使背景图像覆盖整个页面 */
     background-position: center; /* 使背景图像居中 */
     text-align: center;
@@ -57,9 +57,11 @@ h1 {
 }
 
 .cake-image {
-    width: 250px;
-    height: auto;
-    margin: 20px 0;
+    display: block; /* 使其为块级元素 */
+    margin: 20px auto; /* 上下外边距为20px，左右自动调整 */
+    width: 100%; /* 让图像宽度为其父容器的100% */
+    max-width: 250px; /* 最大宽度为250px */
+    height: auto; /* 自适应高度，保持纵横比 */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
