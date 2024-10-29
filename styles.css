@@ -19,16 +19,16 @@ body {
 
 h1 {
     color: #d50000;
-    font-size: 2.5em;
+    font-size: 2rem; /* 默认字体大小 */
 }
 
 .greeting {
-    font-size: 1.2em;
+    font-size: 1.2rem; /* 段落默认字体大小 */
     margin: 10px 0;
 }
 
 .wish {
-    font-size: 1.2em;
+    font-size: 1.2rem; /* 段落默认字体大小 */
     color: #555;
 }
 
@@ -42,7 +42,7 @@ h1 {
 
 button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1rem;
     color: #ffffff;
     background-color: #d50000;
     border: none;
@@ -57,10 +57,29 @@ button:hover {
 
 #message {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #4caf50;
 }
 
 .hidden {
     display: none;
+}
+
+/* 媒体查询 */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* 屏幕宽度小于600px时调整字体大小 */
+    }
+    .greeting, .wish {
+        font-size: 1rem; /* 调整段落字体大小 */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem; /* 屏幕宽度小于400px时进一步调整 */
+    }
+    .greeting, .wish {
+        font-size: 0.9rem; /* 进一步调整段落字体大小 */
+    }
 }
