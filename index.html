@@ -13,40 +13,33 @@
         <p class="wish">May your life be as sweet as this cake!</p>
         <img src="birthday-cake.png" alt="Birthday Cake" class="cake-image">
         
-        <!-- 礼物选择 -->
+        <!-- 礼物生成 -->
         <div class="gift-section">
-            <label for="giftSelect">Choose a gift:</label>
-            <select id="giftSelect">
-                <option value="">Select a gift...</option>
-                <option value="Watch">Watch</option>
-                <option value="Gift Card">Gift Card</option>
-                <option value="Book">Book</option>
-                <option value="Chocolate">Chocolate</option>
-                <option value="Flowers">Flowers</option>
-            </select>
-            <button onclick="showGift()">Show Gift</button>
+            <button onclick="generateGift()">Generate Random Gift</button>
+            <p id="giftMessage" class="hidden"></p>
         </div>
-        
-        <p id="giftMessage" class="hidden"></p>
     </div>
 
     <script>
-        function showMessage() {
-            document.getElementById('message').innerText = "Happy birthday to you! May every day be filled with laughter!";
-            document.getElementById('message').classList.remove('hidden');
-        }
+        const gifts = [
+            "Watch",
+            "Gift Card",
+            "Book",
+            "Chocolate",
+            "Flowers",
+            "Toy",
+            "Perfume",
+            "Cupcake",
+            "Balloons"
+        ];
 
-        function showGift() {
-            const giftSelect = document.getElementById('giftSelect');
+        function generateGift() {
+            const randomIndex = Math.floor(Math.random() * gifts.length);
+            const selectedGift = gifts[randomIndex];
             const giftMessage = document.getElementById('giftMessage');
 
-            if (giftSelect.value) {
-                giftMessage.innerText = `You have chosen a ${giftSelect.value} as a gift! 🎁`;
-                giftMessage.classList.remove('hidden');
-            } else {
-                giftMessage.innerText = "Please select a gift!";
-                giftMessage.classList.remove('hidden');
-            }
+            giftMessage.innerText = `You received a ${selectedGift} as a gift! 🎁`;
+            giftMessage.classList.remove('hidden');
         }
     </script>
 </body>
