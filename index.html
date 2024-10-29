@@ -12,14 +12,41 @@
         <p class="greeting">Dear friend, wishing you happiness every day in the coming year and may all your dreams come true!</p>
         <p class="wish">May your life be as sweet as this cake!</p>
         <img src="birthday-cake.png" alt="Birthday Cake" class="cake-image">
-        <button onclick="showMessage()">Send Wishes</button>
-        <p id="message" class="hidden"></p>
+        
+        <!-- 礼物选择 -->
+        <div class="gift-section">
+            <label for="giftSelect">Choose a gift:</label>
+            <select id="giftSelect">
+                <option value="">Select a gift...</option>
+                <option value="Watch">Watch</option>
+                <option value="Gift Card">Gift Card</option>
+                <option value="Book">Book</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Flowers">Flowers</option>
+            </select>
+            <button onclick="showGift()">Show Gift</button>
+        </div>
+        
+        <p id="giftMessage" class="hidden"></p>
     </div>
 
     <script>
         function showMessage() {
             document.getElementById('message').innerText = "Happy birthday to you! May every day be filled with laughter!";
             document.getElementById('message').classList.remove('hidden');
+        }
+
+        function showGift() {
+            const giftSelect = document.getElementById('giftSelect');
+            const giftMessage = document.getElementById('giftMessage');
+
+            if (giftSelect.value) {
+                giftMessage.innerText = `You have chosen a ${giftSelect.value} as a gift! 🎁`;
+                giftMessage.classList.remove('hidden');
+            } else {
+                giftMessage.innerText = "Please select a gift!";
+                giftMessage.classList.remove('hidden');
+            }
         }
     </script>
 </body>
