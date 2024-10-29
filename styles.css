@@ -20,6 +20,30 @@ body {
 h1 {
     color: #d50000;
     font-size: 2rem; /* 默认字体大小 */
+    animation: jump 1s infinite, gradient 3s linear infinite; /* 应用跳动和渐变动画 */
+}
+
+/* 跳动效果 */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* 向上移动10px */
+    }
+}
+
+/* 渐变效果 */
+@keyframes gradient {
+    0% {
+        color: #d50000;
+    }
+    50% {
+        color: #ffcc00; /* 中间的颜色 */
+    }
+    100% {
+        color: #d50000;
+    }
 }
 
 .greeting {
