@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e1e1;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d50000;
+}
+
+.cake-image {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
