@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日祝福</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>生日快乐！🎉</h1>
+        <p>亲爱的朋友，祝你在新的一岁里，快乐每一天，梦想成真！</p>
+        <p>愿你的生活如这蛋糕般甜蜜！</p>
+        <img src="birthday-cake.png" alt="生日蛋糕" class="cake-image">
+        <button onclick="showMessage()">发送祝福</button>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = "祝你生日快乐，愿你每一天都充满欢笑！";
+            document.getElementById('message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
